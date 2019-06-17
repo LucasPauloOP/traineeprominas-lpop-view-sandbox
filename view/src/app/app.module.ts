@@ -5,12 +5,14 @@ import {FormsModule} from '@angular/forms'; // <----NgModel lives here
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import {HeroesComponent} from './test/test.component';
+import { TestDetailComponent } from './test-detail/test-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    HeroesComponent
+    HeroesComponent,
+    TestDetailComponent
   ],
   imports: [
     BrowserModule,
