@@ -13,7 +13,16 @@ export class TestComponent implements OnInit {
   }
   ngOnInit() {
   }
+}
 
+export class HeroesComponent implements OnInit{
+  hero: Hero = {
+    id: 1,
+    name: 'widstorm',
+  };
+  constructor() {}
+  ngOnInit() {
+  }
 }
 
 
