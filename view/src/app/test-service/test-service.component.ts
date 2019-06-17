@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {Hero} from '../hero';
+import {heroes} from '../test/mock-heroes';
+import {MessageService} from '../test-messages-service';
 
-@Component({
-  selector: 'app-test-service',
-  templateUrl: './test-service.component.html',
-  styleUrls: ['./test-service.component.css']
+
+@Injectable({
+  providedIn: 'root',
 })
-export class TestServiceComponent implements OnInit {
+export class HeroService {
 
-  constructor() { }
+  constructor(private messageService: MessageService){}
 
-  ngOnInit() {
+  getHeroes():Observable<Hero[]>{
+    //ALL:send the message _after_ fetching the heroes
+    this.messageService.add('HeroService: fetched heroes');
+    return of(heroes);
   }
-
 }
+
+
