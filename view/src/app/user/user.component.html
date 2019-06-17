@@ -1,3 +1,11 @@
 <p>
   user works!
 </p>
+
+<div><span>id:</span>{{user.id}}</div>
+<div><label>name:
+  <input [(ngModel)]="user.name" placeholder="name"/>
+  <input [(ngModel)]="user.lastName" placeholder="name"/>
+  <input [(ngModel)]="user.profile" placeholder="name"/>
+</label>
+</div>

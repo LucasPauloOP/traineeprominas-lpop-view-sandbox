@@ -8,7 +8,11 @@ import {User} from './user-schema';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  user: User = {
+    name: '',
+    lastName: '',
+    profile: ''
+  };
   constructor() { }
 
   ngOnInit() {
