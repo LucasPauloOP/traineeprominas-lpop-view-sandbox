@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {Hero} from '../hero';
 
-import {heroes} from './mock-heroes';
+import {HeroService} from '../test-service/test-service.component';
 
 @Component({
   selector: 'app-test',
