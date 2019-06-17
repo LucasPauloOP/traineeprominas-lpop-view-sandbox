@@ -8,6 +8,7 @@ import {HeroesComponent} from './test/test.component';
 import { TestDetailComponent } from './test-detail/test-detail.component';
 import { TestServiceComponent } from './test-service/test-service.component';
 import { TestMessagesComponent } from './test-messages/test-messages.component';
+import { TestMessagesServiceComponent } from './test-messages-service/test-messages-service.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TestMessagesComponent } from './test-messages/test-messages.component';
     HeroesComponent,
     TestDetailComponent,
     TestServiceComponent,
-    TestMessagesComponent
+    TestMessagesComponent,
+    TestMessagesServiceComponent
   ],
   imports: [
     BrowserModule,
