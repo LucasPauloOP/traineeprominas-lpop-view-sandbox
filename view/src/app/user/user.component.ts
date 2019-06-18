@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Service} from '../service/service.components';
+import {Service} from '../service.service';
 import {User} from './user-schema';
 
 @Component({
@@ -8,19 +8,19 @@ import {User} from './user-schema';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user: string[] = ['id', 'name', 'lastname', 'profile'];
-  schema: UserComponent[];
-  results = true;
+  displayedColumns: string[] = ['id', 'name', 'lastname', 'profile', 'action'];
+  dataSource: UserComponent[];
+  isLoadingResults = true;
   constructor(private userService: Service) { }
 
   ngOnInit() {
     this.userService.getAllUsers().subscribe(res => {
-      this.schema = res;
-      console.log('entrou2', this.schema);
-      this.results = false;
+      this.dataSource = res;
+      console.log('entrou2', this.dataSource);
+      this.isLoadingResults = false;
     }, err => {
       console.log(err);
-      this.results = false;
+      this.isLoadingResults = false;
     });
   }
 
