@@ -24,7 +24,8 @@ export class Service {
   }
   postUser(): Observable<User> {
     return this.http.post<User>(`${baseApi}/user`, user, httpOptions)
-      .pipe(tap((user: User) => console.log('Usuário cadastrado.') ));
+      .pipe(tap((user: User) => console.log('Usuário cadastrado.') )
+      );
   }
 
 }
