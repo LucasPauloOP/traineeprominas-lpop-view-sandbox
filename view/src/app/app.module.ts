@@ -8,11 +8,13 @@ import { MatButtonModule, MatCardModule, MatIconModule, MatInputModule,
   MatListModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatTableModule, MatToolbarModule } from '@angular/material';
 
 import { UserComponent } from './user/user.component';
+import { UserPostComponent } from './user-post/user-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
      UserComponent,
+     UserPostComponent,
   ],
   imports: [
     BrowserModule,
