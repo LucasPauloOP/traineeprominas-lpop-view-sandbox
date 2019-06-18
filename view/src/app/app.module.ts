@@ -8,6 +8,7 @@ import {HeroesComponent} from './test/test.component';
 import { TestDetailComponent } from './test-detail/test-detail.component';
 import { TestMessagesComponent } from './test-messages/test-messages.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeroesComponent,
     TestDetailComponent,
     TestMessagesComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
