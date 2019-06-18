@@ -4,7 +4,7 @@ import {UserComponent} from './user/user.component';
 
 
 const routes: Routes = [
-{path: 'user', component: UserComponent},
+{path: 'api/v1/user', component: UserComponent},
 ];
 
 @NgModule({

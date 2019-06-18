@@ -1,8 +1,7 @@
 // import { Component, OnInit } from '@angular/core';
 //
 // import {Hero} from '../hero';
-//
-// import {HeroService} from '../test-service/test-service.component';
+
 //
 // @Component({
 //   selector: 'app-test',

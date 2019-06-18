@@ -1,6 +1,5 @@
 // import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 //
-// import { TestServiceComponent } from './test-service.component';
 //
 // describe('TestServiceComponent', () => {
 //   let component: TestServiceComponent;
