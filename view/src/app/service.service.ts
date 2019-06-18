@@ -16,9 +16,15 @@ const baseApi = '/api';
 
 export class Service {
   constructor(private http: HttpClient) { }
+  /*------------------------User----------------------------------------------*/
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(`${baseApi}/JSON/user`)
       .pipe(tap(user => console.log('entrou'))
       );
   }
+  postUser(): Observable<User> {
+    return this.http.post<User>(`${baseApi}/user`, user, httpOptions)
+      .pipe(tap((user: User) => console.log('Usuário cadastrado.') ));
+  }
+
 }
