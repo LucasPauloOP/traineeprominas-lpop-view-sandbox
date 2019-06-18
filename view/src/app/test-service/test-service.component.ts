@@ -10,7 +10,7 @@ import {MessageService} from '../test-messages-service/test-messages-service.com
 })
 export class HeroService {
 
-  constructor(private messageService: MessageService){}
+  constructor(private messageService: MessageService) {}
 
   getHeroes(): Observable <Hero[]> {
     this.messageService.add('HeroService: fetched heroes');

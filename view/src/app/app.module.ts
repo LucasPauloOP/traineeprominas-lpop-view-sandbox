@@ -3,26 +3,25 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'; // <----NgModel lives here
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
+// import { UserComponent } from './user/user.component';
 import {HeroesComponent} from './test/test.component';
 import { TestDetailComponent } from './test-detail/test-detail.component';
-import { TestServiceComponent } from './test-service/test-service.component';
 import { TestMessagesComponent } from './test-messages/test-messages.component';
-import { TestMessagesServiceComponent } from './test-messages-service/test-messages-service.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
+    // UserComponent,
     HeroesComponent,
     TestDetailComponent,
-    TestServiceComponent,
     TestMessagesComponent,
-    TestMessagesServiceComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
