@@ -10,8 +10,12 @@ import {Service} from '../../service.service';
 })
 
 export class UserPostComponent implements OnInit {
-
-  constructor() { }
+  user: FormGroup;
+  name = '';
+  lastname = '';
+  profile = '';
+  result = false;
+  constructor(private router: Router, private service: Service, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
   }
