@@ -1,8 +1,12 @@
 const proxy = [
   {
-    context:'/api/v1',
-    target:'https://traineeprominas-jjmg-sandbox.herokuapp.com/api/v1',
-    pathRewrite:{'^/api/v1': ''}
+    context: '/api',
+    target: 'http://traineeprominas-jjmg-sandbox.herokuapp.com/api/v1',
+    pathRewrite: {'^/api' : ''},
+    port: 443,
+    secure: false,
+    changeOrigin: true
   }
 ];
+
 module.exports = proxy;
