@@ -1,6 +1,6 @@
 
 export class User  {
   name: string;
-  lastName: string;
+  lastname: string;
   profile: string;
 }

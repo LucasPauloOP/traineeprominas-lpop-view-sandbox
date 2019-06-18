@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+/*user*/
 import {UserComponent} from './user/user.component';
 
 
 const routes: Routes = [
-{path: 'api/v1/user', component: UserComponent},
+{path: 'api/v1/JSON/user', component: UserComponent },
 ];
 
 @NgModule({

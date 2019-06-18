@@ -8,13 +8,13 @@ import {User} from './user-schema';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user: string[] = ['id', 'name', 'lastName', 'profile', 'action'];
-  schema: User[];
+  user: string[] = ['id', 'name', 'lastname', 'profile'];
+  schema: UserComponent[];
   results = true;
-  constructor(private service: Service) { }
+  constructor(private userService: Service) { }
 
   ngOnInit() {
-    this.service.getAllUsers().subscribe(res => {
+    this.userService.getAllUsers().subscribe(res => {
       this.schema = res;
       console.log('entrou2', this.schema);
       this.results = false;
