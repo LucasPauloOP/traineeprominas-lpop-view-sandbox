@@ -27,7 +27,7 @@ export class TeacherPostComponent implements OnInit {
 
   postTeacher(form: NgForm){
     this.result = true;
-    this.service.postUser(form).subscribe(res => {
+    this.service.postTeacher(form).subscribe(res => {
       this.result = false;
       this.router.navigate(['/teacher']);
     }, (err) =>{
