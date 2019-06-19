@@ -1,3 +1,15 @@
-<p>
-  teacher-post works!
-</p>
+<div>
+  <h1>Cadastre um professor</h1>
+</div>
+<form class="example-container" [formGroup]="teacher" (ngSubmit)="postTeacher(teacher.value)">
+  <mat-form-field>
+    <input matInput name = "name" required placeholder="Nome" formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name = "lastname" required placeholder="Sobrenome" formControlName="lastname">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name = "profile" required placeholder="phd" formControlName = "phd">
+  </mat-form-field>
+  <button type="submit" [disabled]="!teacher.valid" mat-button color="primary">Cadastrar</button>
+</form>
