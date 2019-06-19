@@ -16,7 +16,10 @@ import  {UserPutComponent } from './user/user-put/user-put.component';
 import  { UserGetidComponent } from './user/user-getid/user-getid.component'
 import  {UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserDetalheComponent } from './user/user-detalhe/user-detalhe.component';
-import { TeacherComponent } from './teacher/teacher.component';
+import { TeacherComponent } from './teacher/teacher/teacher.component';
+import { TeacherPostComponent } from './teacher/teacher-post/teacher-post.component';
+import { TeacherPutComponent } from './teacher/teacher-put/teacher-put.component';
+import { TeacherGetidComponent } from './teacher/teacher-getid/teacher-getid.component';
 
 
 @NgModule({
@@ -30,6 +33,9 @@ import { TeacherComponent } from './teacher/teacher.component';
      MenuComponent,
      UserDetalheComponent,
      TeacherComponent,
+     TeacherPostComponent,
+     TeacherPutComponent,
+     TeacherGetidComponent,
   ],
   
   imports: [
