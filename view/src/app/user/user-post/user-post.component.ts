@@ -30,7 +30,7 @@ export class UserPostComponent implements OnInit {
     this.service.postUser(form).subscribe(res => {
       this.result = false;
       this.router.navigate(['/user']);
-    }, err =>{
+    }, (err) =>{
       console.log(err);
       this.result = false;
     });

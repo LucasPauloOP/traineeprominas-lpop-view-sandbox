@@ -4,11 +4,12 @@ import {Service} from '../../service.service';
 import {User} from '../user-schema';
 
 @Component({
-  selector: 'app-user-getid',
-  templateUrl: './user-getid.component.html',
-  styleUrls: ['./user-getid.component.css']
+  selector: 'app-user-detalhe',
+  templateUrl: './user-detalhe.component.html',
+  styleUrls: ['./user-detalhe.component.css']
 })
-export class UserGetidComponent implements OnInit {
+
+export class UserDetalheComponent implements OnInit {
   user: User= { id:null, name:'', lastname:'', profile:''}
   result = true;
   constructor( private router: Router, private route: ActivatedRoute, private service: Service) { }
@@ -20,7 +21,7 @@ export class UserGetidComponent implements OnInit {
   getUser(id){
     this.service.getFilterUser(id)
     .subscribe(data => {
-      this.user=data[0];
+      this.user=data;
       console.log(this.user);
       this.result = false
     })

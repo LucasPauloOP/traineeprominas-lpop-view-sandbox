@@ -15,11 +15,11 @@ const routes: Routes = [
   /*-----------------------------------user----------------------------------------------------------*/
 {path: 'user', component: UserComponent,  data: { title: 'Lista de usuários' } },
 
-{path: 'create/user', component: UserPostComponent,  data: { title: 'Cadastro de usuário' }},
+{path: 'user/create', component: UserPostComponent,  data: { title: 'Cadastro de usuário' }},
 
-{path: 'put/user', component: UserPutComponent,  data: { title: 'Editar usuário' }},
+{path: 'user/update/:id', component: UserPutComponent,  data: { title: 'Editar usuário' }},
 
-{path:  'getid/user', component:UserGetidComponent,  data: { title: 'Detalhes do usuário' }},
+{path:  'user/:id', component:UserGetidComponent,  data: { title: 'Detalhes do usuário' }},
 // { path: '',redirectTo: '/produtos',pathMatch: 'full'}
 
 ];

@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
-import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatIconModule, MatInputModule,
   MatListModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatTableModule, MatToolbarModule } from '@angular/material';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
 //----------------user-----------------------------------------------
 import { UserComponent } from './user/user.component';
 import { UserPostComponent } from './user/user-post/user-post.component';
 import  {UserPutComponent } from './user/user-put/user-put.component';
 import  { UserGetidComponent } from './user/user-getid/user-getid.component'
 import  {UserDeleteComponent } from './user/user-delete/user-delete.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations' 
+import { UserDetalheComponent } from './user/user-detalhe/user-detalhe.component';
 
 
 @NgModule({
@@ -23,16 +25,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
      UserPostComponent,
      UserPutComponent,
      UserGetidComponent,
-     UserDeleteComponent
+     UserDeleteComponent,
+     MenuComponent,
+     UserDetalheComponent,
   ],
   
   imports: [
     BrowserModule,
-    FormBuilder,
-     FormGroup, 
-     NgForm, 
-     Validators,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
     MatInputModule,
@@ -44,7 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     MatSidenavModule,
     MatTableModule,
     MatToolbarModule,
-    BrowserAnimationsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

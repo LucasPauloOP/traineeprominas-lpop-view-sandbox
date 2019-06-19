@@ -3,13 +3,13 @@
 </div>
 <form class="example-container" [formGroup]="user" (ngSubmit)="postUser(user.value)">
   <mat-form-field>
-    <input matInput name = "name"> required placeholder="Nome" formControlName="name">
+    <input matInput name = "name" required placeholder="Nome" formControlName="name">
   </mat-form-field>
   <mat-form-field>
-    <input matInput name = "lastname"> required placeholder="Sobrenome" formControlName="lastname">
+    <input matInput name = "lastname" required placeholder="Sobrenome" formControlName="lastname">
   </mat-form-field>
   <mat-form-field>
-    <input matInput name = "profile"> required placeholder="profile" formControlName = "profile">
+    <input matInput name = "profile" required placeholder="profile" formControlName = "profile">
   </mat-form-field>
   <button type="submit" [disabled]="!user.valid" mat-button color="primary">Cadastrar</button>
 </form>
