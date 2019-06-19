@@ -22,7 +22,7 @@ export class Service {
       .pipe(tap(user => console.log('entrou'))
       );
   }
-  postUser(): Observable<User> {
+  postUser(user): Observable<User> {
     return this.http.post<User>(`${baseApi}/user`, user, httpOptions)
       .pipe(tap((user: User) => console.log('Usuário cadastrado.') )
       );
