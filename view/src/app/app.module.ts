@@ -7,11 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule, MatCardModule, MatIconModule, MatInputModule,
   MatListModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatTableModule, MatToolbarModule } from '@angular/material';
 
+//----------------user-----------------------------------------------
 import { UserComponent } from './user/user.component';
 import { UserPostComponent } from './user/user-post/user-post.component';
-import { UserPutComponent } from './user-put/user-put.component';
-import { UserDeleteComponent } from './user-delete/user-delete.component';
-import { UserGetidComponent } from './user-getid/user-getid.component';
+import  {UserPutComponent } from './user/user-put/user-put.component';
+import  { UserGetidComponent } from './user/user-getid/user-getid.component'
+import  {UserDeleteComponent } from './user/user-delete/user-delete.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations' 
+
 
 @NgModule({
   declarations: [
@@ -19,9 +22,10 @@ import { UserGetidComponent } from './user-getid/user-getid.component';
      UserComponent,
      UserPostComponent,
      UserPutComponent,
-     UserDeleteComponent,
      UserGetidComponent,
+     UserDeleteComponent
   ],
+  
   imports: [
     BrowserModule,
     FormBuilder,
@@ -40,6 +44,7 @@ import { UserGetidComponent } from './user-getid/user-getid.component';
     MatSidenavModule,
     MatTableModule,
     MatToolbarModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
