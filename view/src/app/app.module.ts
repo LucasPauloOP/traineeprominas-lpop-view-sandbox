@@ -16,6 +16,7 @@ import  {UserPutComponent } from './user/user-put/user-put.component';
 import  { UserGetidComponent } from './user/user-getid/user-getid.component'
 import  {UserDeleteComponent } from './user/user-delete/user-delete.component';
 import { UserDetalheComponent } from './user/user-detalhe/user-detalhe.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { UserDetalheComponent } from './user/user-detalhe/user-detalhe.component
      UserDeleteComponent,
      MenuComponent,
      UserDetalheComponent,
+     TeacherComponent,
   ],
   
   imports: [
