@@ -29,6 +29,12 @@ import { CoursePostComponent } from './course/course-post/course-post.component'
 import { CoursePutComponent } from './course/course-put/course-put.component';
 import { CourseGetidComponent } from './course/course-getid/course-getid.component';
 
+//--------------------------------Student------------------------------------------------------------
+import { StudentComponent } from './student/student/student.component';
+import { StudentPostComponent } from './student/student-post/student-post.component';
+import { StudentPutComponent } from './student/student-put/student-put.component';
+import { StudentGetidComponent } from './student/student-getid/student-getid.component';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +53,10 @@ import { CourseGetidComponent } from './course/course-getid/course-getid.compone
      CoursePostComponent,
      CoursePutComponent,
      CourseGetidComponent,
+     StudentComponent,
+     StudentPostComponent,
+     StudentPutComponent,
+     StudentGetidComponent,
   ],
   
   imports: [

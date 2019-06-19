@@ -20,7 +20,10 @@ import {CoursePutComponent} from './course/course-put/course-put.component';
 import {CourseGetidComponent} from './course/course-getid/course-getid.component';
 
 /*student*/
-
+import {StudentComponent} from './student/student/student.component'
+import {StudentPostComponent} from './student/student-post/student-post.component'
+import {StudentPutComponent} from './student/student-put/student-put.component'
+import {StudentGetidComponent} from './student/student-getid/student-getid.component'
 
 const routes: Routes = [
 
@@ -52,6 +55,15 @@ const routes: Routes = [
 {path: 'update/course/:id', component: CoursePutComponent,  data: { title: 'Editar curso' }},
 
 {path:  'course/:id', component: CourseGetidComponent,  data: { title: 'Detalhes do curso' }},
+
+/*----------------------------------student--------------------------------------------------------*/
+{path: 'student', component: StudentComponent,  data: { title: 'Lista de curso' } },
+
+{path: 'student/create', component: StudentPostComponent,  data: { title: 'Cadastro de curso' }},
+
+{path: 'update/student/:id', component: StudentPutComponent,  data: { title: 'Editar curso' }},
+
+{path:  'student/:id', component: StudentGetidComponent,  data: { title: 'Detalhes do curso' }},
 
 ];
 
