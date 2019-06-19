@@ -9,7 +9,7 @@ import {Course} from  '../course-Schema'
 })
 export class CourseComponent implements OnInit {
 
-  displayedColumns: string[] = [ 'id', 'name', 'city', 'period', 'teacher'];
+  displayedColumns: string[] = [ 'id', 'name', 'city', 'period', 'teacher','action'];
   dataSource: Course[];
   isLoadingResults = true;
 

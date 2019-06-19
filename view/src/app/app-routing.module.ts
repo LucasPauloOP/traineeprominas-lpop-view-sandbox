@@ -49,7 +49,7 @@ const routes: Routes = [
 
 {path: 'course/create', component: CoursePostComponent,  data: { title: 'Cadastro de curso' }},
 
-{path: 'course/update/:id', component: CoursePutComponent,  data: { title: 'Editar curso' }},
+{path: 'update/course/:id', component: CoursePutComponent,  data: { title: 'Editar curso' }},
 
 {path:  'course/:id', component: CourseGetidComponent,  data: { title: 'Detalhes do curso' }},
 
