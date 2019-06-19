@@ -23,6 +23,12 @@ import { TeacherPostComponent } from './teacher/teacher-post/teacher-post.compon
 import { TeacherPutComponent } from './teacher/teacher-put/teacher-put.component';
 import { TeacherGetidComponent } from './teacher/teacher-getid/teacher-getid.component';
 
+//--------------------------------Course-----------------------------------------------------------
+import { CourseComponent } from './course/course/course.component';
+import { CoursePostComponent } from './course/course-post/course-post.component';
+import { CoursePutComponent } from './course/course-put/course-put.component';
+import { CourseGetidComponent } from './course/course-getid/course-getid.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +43,10 @@ import { TeacherGetidComponent } from './teacher/teacher-getid/teacher-getid.com
      TeacherPostComponent,
      TeacherPutComponent,
      TeacherGetidComponent,
+     CourseComponent,
+     CoursePostComponent,
+     CoursePutComponent,
+     CourseGetidComponent,
   ],
   
   imports: [

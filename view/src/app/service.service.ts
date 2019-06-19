@@ -4,6 +4,7 @@ import {User} from './user/user-schema';
 import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Teacher } from './teacher/teacher-schema';
+import { Course } from './course/course-Schema';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -91,12 +92,74 @@ export class Service {
     );
   }
 
+  /*-------------------------------------Course----------------------------------------------*/
+  getAllCourse(): Observable<Course[]> {
+    return this.http.get<Course[]>(`${baseApi}/JSON/course`)
+      .pipe(tap(course => console.log('Leu cursos')),
+      catchError(this.handleError('getAllCourse',[])) 
+      );
+    }
+
+  getFilterCourse(id:number): Observable<Course>{
+    const url = `${baseApi}/JSON/course/${id}`;
+    return this.http.get<Course>(url).pipe(tap(_ => console.log('Achou um curso id=${id}')),
+    catchError(this.handleError<Course>(`getCourse id=${id}`))
+    );
+  }
+
+  postCourse(course): Observable<Course> {
+    return this.http.post<Course>(`${baseApi}/course`, course, httpOptions)
+      .pipe(tap((course: Course) => console.log('curso cadastrado com w/ id=${course.id}' )
+      ),catchError(this.handleError<Course>('postCourse')));
+  }
+  putCourse(id,course): Observable<Course> {
+    const url = `${baseApi}/course/${id}`;
+    return this.http.put(url,course,httpOptions)
+      .pipe(tap(_ => console.log('atualiza um curso com id = ${id}' ))
+      ,catchError(this.handleError<any>('putCourse')));
+  }
+
+  deleteCourse(id): Observable<Course> {
+    const url = `${baseApi}/course/${id}`;
+
+    return this.http.delete<Course>(url, httpOptions).pipe(
+      tap(_ => console.log(`remove o curso com id=${id}`)),
+      catchError(this.handleError<Course>('deleteCourse'))
+    );
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   private handleError<T> (operation = 'operation',result?: T){
     return(error:any): Observable<T> => {
       console.error(error);
       return of (result as T);
     }
   }
-  
+
 
 }
