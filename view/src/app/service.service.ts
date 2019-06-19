@@ -5,6 +5,7 @@ import {HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Teacher } from './teacher/teacher-schema';
 import { Course } from './course/course-Schema';
+import { Student} from './student/studen-schema'
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -125,6 +126,42 @@ export class Service {
     return this.http.delete<Course>(url, httpOptions).pipe(
       tap(_ => console.log(`remove o curso com id=${id}`)),
       catchError(this.handleError<Course>('deleteCourse'))
+    );
+  }
+
+  //--------------------------------------Student-------------------------------------------------------
+  getAllStudent(): Observable<Student[]> {
+    return this.http.get<Student[]>(`${baseApi}/JSON/student`)
+      .pipe(tap(student => console.log('Leu cursos')),
+      catchError(this.handleError('getAllStudent',[])) 
+      );
+    }
+
+  getFilterStudent(id:number): Observable<Student>{
+    const url = `${baseApi}/JSON/student/${id}`;
+    return this.http.get<Student>(url).pipe(tap(_ => console.log('Achou um curso id=${id}')),
+    catchError(this.handleError<Student>(`getStudent id=${id}`))
+    );
+  }
+
+  postStudent(student): Observable<Student> {
+    return this.http.post<Student>(`${baseApi}/student`, student, httpOptions)
+      .pipe(tap((student: Student) => console.log('curso cadastrado com w/ id=${student.id}' )
+      ),catchError(this.handleError<Student>('postStudent')));
+  }
+  putStudent(id,student): Observable<Student> {
+    const url = `${baseApi}/student/${id}`;
+    return this.http.put(url,student,httpOptions)
+      .pipe(tap(_ => console.log('atualiza um curso com id = ${id}' ))
+      ,catchError(this.handleError<any>('putStudent')));
+  }
+
+  deleteStudent(id): Observable<Student> {
+    const url = `${baseApi}/student/${id}`;
+
+    return this.http.delete<Student>(url, httpOptions).pipe(
+      tap(_ => console.log(`remove o curso com id=${id}`)),
+      catchError(this.handleError<Student>('deleteStudent'))
     );
   }
 
