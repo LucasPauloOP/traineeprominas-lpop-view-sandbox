@@ -11,7 +11,7 @@ const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
-const baseApi = 'https://traineeprominas-jjmg-sandbox.herokuapp.com/api/v1';
+const baseApi = '/api';
 
 @Injectable({
   providedIn: 'root'
