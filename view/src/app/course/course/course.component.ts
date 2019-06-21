@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {Service} from '../../service.service'
-import {Course} from  '../course-Schema'
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {Service} from '../../service.service';
+import {Course} from  '../course-Schema';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-course',
@@ -10,15 +12,17 @@ import {Course} from  '../course-Schema'
 export class CourseComponent implements OnInit {
 
   displayedColumns: string[] = [ 'id', 'name', 'city', 'period', 'teacher','action'];
-  dataSource: Course[];
+  dataSource: MatTableDataSource<Course>;
   isLoadingResults = true;
 
   constructor(private api: Service) { }
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   ngOnInit() {
     this.api.getAllCourse()
       .subscribe(res => {
-        this.dataSource = res;
+        this.dataSource = new MatTableDataSource<Course>(res);
+        this.dataSource.paginator = this.paginator;
         console.log(this.dataSource);
         this.isLoadingResults = false;
       }, err => {

@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import {Service} from '../../service.service';
 import { Teacher } from 'src/app/teacher/teacher-schema';
-import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-course-post',

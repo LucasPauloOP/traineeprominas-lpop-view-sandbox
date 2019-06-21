@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatIconModule, MatInputModule,
-  MatListModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatTableModule, MatToolbarModule } from '@angular/material';
+  MatListModule, MatProgressSpinnerModule, MatSelectModule, MatSidenavModule, MatTableModule, MatToolbarModule,  MatPaginatorModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 
 //--------------------------------User-----------------------------------------------
 import { UserComponent } from './user/user.component';
@@ -76,7 +78,8 @@ import { StudentGetidComponent } from './student/student-getid/student-getid.com
     MatSidenavModule,
     MatTableModule,
     MatToolbarModule,
-    LayoutModule
+    LayoutModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

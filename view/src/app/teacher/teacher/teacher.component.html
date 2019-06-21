@@ -1,6 +1,7 @@
 <div><h1>Professores cadastrados</h1></div>
 <button color="accent" routerLink="/teacher/create" selected>Cadastrar</button>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource">
 
   <ng-container matColumnDef = "id">
     <th mat-headder-cell *matHeaderCellDef>ID</th>
@@ -30,3 +31,5 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+<mat-paginator [pageSizeOptions]="[1,5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
