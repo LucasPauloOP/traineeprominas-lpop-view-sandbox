@@ -1,9 +1,21 @@
-
-table{
-    width: 90%;
+.mat-form-field {
+  font-size: 25px;
+  width: 100%;
 }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
+
+button{
+    margin: 20px;
+    width: 30%;
+}
+
+th{
+  color:white;
+  background-color: green;
+  font-size: 20px;
+}
+
+td{
+  font-size: 20px;
+  color:blue;
+   background-color:#34FF39;
+}
