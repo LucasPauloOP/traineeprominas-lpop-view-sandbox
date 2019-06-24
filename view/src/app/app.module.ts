@@ -11,6 +11,10 @@ import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 //--------------------------------User-----------------------------------------------
 import { UserComponent } from './user/user.component';
@@ -36,6 +40,7 @@ import { StudentComponent } from './student/student/student.component';
 import { StudentPostComponent } from './student/student-post/student-post.component';
 import { StudentPutComponent } from './student/student-put/student-put.component';
 import { StudentGetidComponent } from './student/student-getid/student-getid.component';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -79,7 +84,11 @@ import { StudentGetidComponent } from './student/student-getid/student-getid.com
     MatTableModule,
     MatToolbarModule,
     LayoutModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    BrowserModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

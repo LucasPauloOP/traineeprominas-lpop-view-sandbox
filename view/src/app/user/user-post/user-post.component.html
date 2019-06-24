@@ -1,15 +1,23 @@
 <div>
   <h1>Cadastre um usuário</h1>
 </div>
-<form class="example-container" [formGroup]="user" (ngSubmit)="postUser(user.value)">
-  <mat-form-field>
-    <input matInput name = "name" required placeholder="Nome" formControlName="name">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput name = "lastname" required placeholder="Sobrenome" formControlName="lastname">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput name = "profile" required placeholder="profile" formControlName = "profile">
-  </mat-form-field>
-  <button type="submit" [disabled]="!user.valid" mat-button color="primary">Cadastrar</button>
-</form>
+  <form class="example-container" [formGroup]="user" (ngSubmit)="postUser(user.value)">
+
+    <mat-form-field>
+      <input matInput name = "name" required placeholder="Nome" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput name = "lastname" required placeholder="Sobrenome" formControlName="lastname">
+    </mat-form-field>
+
+    <mat-form-field>
+       <mat-label>Perfil</mat-label>
+        <select matNativeControl required name="profile" formControlName="profile">
+          <option value="admin">Administrador</option>
+          <option value="guess">Visitante</option>
+        </select>
+      </mat-form-field>
+
+    <button type="submit" [disabled]="!user.valid" mat-raised-button color="primary">Cadastrar</button>
+  </form>

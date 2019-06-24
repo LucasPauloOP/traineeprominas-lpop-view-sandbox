@@ -9,13 +9,21 @@ button{
 }
 
 th{
-  color:white;
-  background-color: green;
+  color:darkcyan;
+
   font-size: 20px;
 }
 
 td{
   font-size: 20px;
   color:black;
-   background-color:#79FF84;
+}
+
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+.primary{
+  background-color: darkcyan;
 }
