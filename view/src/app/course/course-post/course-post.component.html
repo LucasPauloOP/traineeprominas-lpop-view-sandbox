@@ -1,6 +1,11 @@
+<div class="button-row">
+  <button mat-flat-button color="accent" [routerLink]="['/course']"><mat-icon>list</mat-icon> Voltar</button>
+</div>
+
 <div>
   <h1>Cadastre um curso</h1>
 </div>
+
 <form class="example-container" [formGroup]="course" (ngSubmit)="postCourse(course.value)">
   <mat-form-field>
     <input matInput name = "name" required placeholder="Nome" formControlName="name">
@@ -17,5 +22,5 @@
     <mat-option *ngFor="let prof of teacher" [value]="prof.id">{{prof.name}}</mat-option>
     </mat-select>
   </mat-form-field>
-  <button type="submit" [disabled]="!course.valid" mat-button color="primary">Cadastrar</button>
+  <button type="submit" [disabled]="!course.valid" mat-raised-button color="primary">Cadastrar</button>
 </form>
