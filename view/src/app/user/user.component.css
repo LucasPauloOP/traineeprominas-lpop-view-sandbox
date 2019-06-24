@@ -10,7 +10,6 @@ button{
 
 th{
   color:darkcyan;
-
   font-size: 20px;
 }
 
@@ -22,6 +21,7 @@ td{
 .example-container {
   height: 400px;
   overflow: auto;
+  
 }
 
 .primary{
