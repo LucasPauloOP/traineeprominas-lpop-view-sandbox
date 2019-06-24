@@ -9,7 +9,6 @@ import {Service} from '../../service.service';
   styleUrls: ['./teacher-post.component.css']
 })
 export class TeacherPostComponent implements OnInit {
-
   teacher: FormGroup;
   name = '';
   lastname = '';
