@@ -1,5 +1,8 @@
+<div class="button-row">
+  <button mat-flat-button color="accent" [routerLink]="['/student']"><mat-icon>list</mat-icon> Voltar</button>
+</div>
 <div>
-    <h1>Cadastre um curso</h1>
+    <h1>Cadastre um estudante</h1>
   </div>
   <form class="example-container" [formGroup]="student" (ngSubmit)="postStudent(student.value)">
       <mat-form-field>
@@ -17,6 +20,6 @@
           <mat-option *ngFor="let curso of course" [value]="curso.id">{{curso.name}}</mat-option>
           </mat-select>
         </mat-form-field>
-      <button type="submit" [disabled]="!student.valid" mat-button color="primary" >Cadastrar</button>
+        <button type="submit" [disabled]="!student.valid" mat-raised-button color="primary">Cadastrar</button>
     </form>
   

@@ -1,21 +1,28 @@
 .mat-form-field {
-    font-size: 25px;
-    width: 100%;
-  }
+  font-size: 25px;
+  width: 100%;
+}
 
-  button{
-      margin: 20px;
-      width: 30%;
-  }
+button{
+    margin: 20px;
+    width: 40%;
+}
 
-  th{
-    color:white;
-    background-color: green;
-    font-size: 20px;
-  }
+th{
+  color:darkcyan;
+  font-size: 20px;
+}
 
-  td{
-    font-size: 20px;
-    color:black;
-     background-color:#79FF84;
-}   
+td{
+  font-size: 20px;
+  color:black;
+}
+
+.example-container {
+  height: 400px;
+  overflow: auto;
+}
+
+.primary{
+  background-color: darkcyan;
+}
