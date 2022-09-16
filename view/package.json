@@ -24,7 +24,7 @@
     "@coreui/coreui": "^2.1.12",
     "@material/radio": "^2.3.0",
     "angular-in-memory-web-api": "^0.8.0",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.3.1",
     "hammerjs": "^2.0.8",
     "jquery": "^3.5.0",
     "ngx-bootstrap": "^4.3.0",
